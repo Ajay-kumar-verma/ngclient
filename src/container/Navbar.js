@@ -1,24 +1,32 @@
 import './style.css';
-
-const menu =(list) =>{
-
-return (<>
-    <ul>
-     {list.map(e=> <li><a href={"#"+e}>{e}</a></li>)}
-    </ul>
-</>)
-
-}
-
-
-
+   
+ 
 const Navbar =_=>{
 
 return (<>
  <div className="navbar" >
   <div className="logo" >LOGO</div>
   <div className="menu"> 
-    <div className="menulist">{menu(["login","signup","home","contact"])}</div>
+    <div className="menulist">
+    <ul>
+    <li>
+      <a href="#login">login</a>
+    </li>
+
+    <li>
+      <a href="#signup">signup</a>
+    </li>
+    <li>
+      <a href="#home">home</a>
+    </li>
+
+    <li>
+      <a href="#contact">contact</a>
+    </li>
+
+    </ul>
+      
+      </div>
    </div>
  </div>
 

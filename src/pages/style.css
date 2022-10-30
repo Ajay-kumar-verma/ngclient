@@ -1,4 +1,20 @@
-.login ,.contact ,.signup {
-height:100vh;
 
+@import '~antd/dist/antd.css';
+
+.loginPage ,.contact ,.signup {
+height:100vh;
 }
+
+.remCreate{
+    display:flex;
+    /* background-color:red; */
+  justify-content:space-between;
+}
+
+.LoginPage , .SignUpPage{
+    padding:5px;
+    max-width: 800px;
+    height:100vh;
+    margin:auto;
+    background-color:white;
+  }  

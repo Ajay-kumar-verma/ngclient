@@ -7,9 +7,12 @@ function App() {
   const state =useSelector(state => state.login );
 
   console.log("Cureent redux state is ",state);
+  
   if(state.login){
-   return   <Home />
+      return   <Home />
   }
+
+  
 
   return (
     <>

@@ -4,7 +4,7 @@ import {getData } from '../rtk/actions/index';
 
 
 const Home =()=>{
- const {login,user} =useSelector(state =>state); 
+ const {user} =useSelector(state =>state); 
 
  const dispatch =useDispatch(); 
 

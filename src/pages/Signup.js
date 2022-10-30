@@ -5,12 +5,12 @@ import {
     Divider
   } from 'antd';
   
-import { useSelector,useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {user } from '../rtk/actions/index';
   
  const Signup = _=>{
 
-  const state =useSelector(state =>state.login)
+  // const state =useSelector(state =>state.login)
   const dispatch =useDispatch(); 
    
 

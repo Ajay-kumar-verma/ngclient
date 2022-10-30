@@ -16,7 +16,7 @@ const initialState = {
     'login',
     async (obj) => {
       // console.log('login data is ',obj)
-      const data = await   axios.post(`https://ngserver.herokuapp.com/login/`,obj)
+      const data = await   axios.post(`${END_POINT}`,obj)
       // console.log("Server data is  ",data);     
        return data.data;
    

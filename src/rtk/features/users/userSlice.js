@@ -23,9 +23,9 @@ const signup = createAsyncThunk(
 const getuser = createAsyncThunk(
   'getuser',
   async (token) => {
-    console.log("submit data is ",token)
-  const data = await   axios.get(`${END_POINT}/user`,token)
-  //  console.log("Server data is  ",data);     
+    console.log("token is  ",token)
+  const data = await   axios.get(`${END_POINT}/user`,{token})
+   console.log("Server data is  ",data);     
     return data.data;
     }
 )

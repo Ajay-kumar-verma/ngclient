@@ -4,7 +4,7 @@ import Contact from './Contact'
 
 import './style.css'
 
-export default _ =>{
+const  Pages = _ =>{
 
     return (<>
     <Login />
@@ -14,3 +14,5 @@ export default _ =>{
 
 
 }
+
+export default Pages;

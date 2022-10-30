@@ -1,6 +1,6 @@
 
 
-export default _=>{
+ const Signup = _=>{
 
     return (<>
       <div className="signup" id="signup" >Signup PAGE </div>
@@ -8,3 +8,4 @@ export default _=>{
     </>)
     
     }
+  export default Signup;

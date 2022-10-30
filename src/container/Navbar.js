@@ -12,7 +12,7 @@ return (<>
 
 
 
-export default _=>{
+const Navbar =_=>{
 
 return (<>
  <div className="navbar" >
@@ -28,3 +28,5 @@ return (<>
 }
 
 
+
+export default  Navbar;

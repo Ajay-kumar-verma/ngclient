@@ -1,6 +1,4 @@
-
-
-export default _=>{
+const Login = _=>{
 
 return (<>
   <div className="login" id="login" >LOGIN PAGE </div>
@@ -8,3 +6,6 @@ return (<>
 </>)
 
 }
+
+
+export default  Login;

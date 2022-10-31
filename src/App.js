@@ -1,25 +1,35 @@
 import {useSelector} from 'react-redux'
+import {Routes,Route} from 'react-router-dom';
 import Navbar from './container/Navbar'
 import Pages from './pages/Pages'
 import Home from './pages/Home'
+
 function App() {
 
-  const state =useSelector(state => state.login );
+  const {login,user} =useSelector(state => state );
 
-  console.log("Cureent redux state is ",state);
+  console.log("Cureent redux state is ",login,user);
   
-  if(state.login){
-      return   <Home />
-  }
+  // if(false){
+  //     return   <Home />
+  // }
 
-  
+const Com =()=>{
+  return <>HI</>
+}
 
-  return (
-    <>
-    <Navbar />
-    <Pages /> 
-    </>
-  );
+return (<>
+<Com />
+<Routes>
+<Route path="/" component={<Com />} />
+
+</Routes>
+
+
+
+</>)
+
+
 }
 
 export default App;

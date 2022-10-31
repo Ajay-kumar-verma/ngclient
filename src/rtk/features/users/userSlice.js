@@ -20,15 +20,6 @@ const signup = createAsyncThunk(
 )
 
 
-const getuser = createAsyncThunk(
-  'getuser',
-  async (token) => {
-    console.log("token is  ",token)
-  const data = await   axios.get(`${END_POINT}/user`,{token})
-   console.log("Server data is  ",data);     
-    return data.data;
-    }
-)
 
 
 const {reducer } = createSlice({
@@ -51,23 +42,8 @@ const {reducer } = createSlice({
        state.message = action.payload.msg;
       // console.log("data is ",action.payload)
      })  
- 
-   builder.addCase(getuser.pending, state => {
-  state.loading = true;
-  })
-
-builder.addCase(getuser.fulfilled, (state,action) => {
- state.loading = false ;
-//  console.log("data is ",action.payload)
-  state.userData = action.payload;
-  state.message= action.payload.msg;
-})
-
-builder.addCase(getuser.rejected,(state,action) => {
- state.loading = false;
- state.userData = action.payload;
-// console.log("data is ",action.payload)
-})  
+    }
+ })  
 
 
 
@@ -75,10 +51,6 @@ builder.addCase(getuser.rejected,(state,action) => {
 
  
  
-    }  
-})
-
  
 export const userReducer =  reducer ;
 export const userActions = signup;
-export const getActions = getuser;

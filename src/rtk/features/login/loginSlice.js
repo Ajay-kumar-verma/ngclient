@@ -6,7 +6,7 @@ const initialState = {
    loading:false,   
    login:false,
    message:"",
-   token:"",
+   userData:{},
 
   }
   const END_POINT = `https://ngserver.herokuapp.com/login/`;
@@ -17,7 +17,7 @@ const initialState = {
     async (obj) => {
       // console.log('login data is ',obj)
       const data = await   axios.post(`${END_POINT}`,obj)
-      // console.log("Server data is  ",data);     
+      console.log("Server data is  ",data.data);     
        return data.data;
    
     }
@@ -36,20 +36,15 @@ const {reducer } = createSlice({
  
    builder.addCase(login.fulfilled, (state,action) => {
      state.loading = false ;
-     state.token = action.payload.token;
      state.login = action.payload.login;
-      if(action.payload.login && action.payload.token){
-        localStorage.setItem("token",action.payload.token);
-        localStorage.setItem("login",action.payload.login);
-
-      }
+     state.message=action.payload.message;
+     state.userData= action.payload.user;
       
    })
 
    builder.addCase(login.rejected,(state,action) => {
      state.loading = false;
-     state.token = action.payload.token;
-     state.login = action.payload.login;
+      state.login = action.payload.login;
     
     })  
 
